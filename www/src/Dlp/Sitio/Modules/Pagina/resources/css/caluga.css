@@ -1,0 +1,100 @@
+.calugas-mini .columns.is-gapless:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.caluga-color {
+    margin: 0;
+    padding: 0;
+}
+.imagen-caluga {
+    position: relative;
+}
+
+.left .imagen-caluga {
+    order: 1;
+}
+.left .texto-caluga {
+    order: 2;
+}
+.left .imagen-caluga:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-top: 0 solid transparent;
+    border-right-style: solid;
+    border-right-width: 4.7vw;
+    border-right-color: inherit;
+    border-bottom: 4.7vw solid transparent;
+    border-left: 0 solid transparent;
+
+}
+
+.right .imagen-caluga {
+    order: 2;
+}
+.right .texto-caluga {
+    order: 1;
+}
+.right .imagen-caluga:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border-top-style: solid;
+    border-top-width: 4.7vw;
+    border-top-color: inherit;
+    border-right: 4.7vw solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 0 solid transparent;
+}
+
+.imagen-caluga {
+    line-height: 0;
+}
+.texto-caluga {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto-color {
+    color: #ffffff;
+    padding: 0 11.6vw;
+}
+.boton-portada {
+    color: rgb(255, 255, 255);
+    padding: 0.5vw 1vw;
+    margin-top: 1vw;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+.boton-portada:hover {
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 959px) {
+    .titulo {
+        display: inline-block;
+    }
+    h1.titulo::after {
+        width: 14.4vw;
+    }
+    .texto-color {
+        padding: 10vw 11.6vw;
+        text-align: center;
+    }
+    .boton-portada {
+        padding: 1.5vw 4vw;
+        margin-top: 4vw;
+    }
+    .imagen-caluga {
+        display: none;
+    }
+}

@@ -1,0 +1,68 @@
+<nav class="menu-superior navbar is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand borde-lateral {#CLASE#}" >
+        <a class="navbar-item" href="{#BASE_URL#}">
+            <img src="{#LOGO#}" alt="{#NOMBRE_SITIO#}" width="162" height="60">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-center menu">
+            {#ITEM_MENU#}
+        </div>
+        <div class="navbar-end idioma">
+            {#IDIOMA#}
+            <a class="navbar-item anexo-menu" href="#" id="btn-contacto-normal" name="correo" title="correo" rel="nofollow">
+                <img class="icono-menu" src="{#BASE_URL#}uploads/general/contacto_white.png" name="contacto" alt="contacto">
+            </a>
+        </div>
+    </div>
+
+    <div id="menu" class="navbar-menu">
+        <div id="cont-menu-movil">
+            <div class="navbar-center menu" id="items-menu-movil">
+                {#ITEM_MENU_MOVIL#}
+                <div class="anexos-movil">
+                    {#IDIOMA#}
+                    <a class="navbar-item anexo-menu" href="#" id="boton-contacto-movil" name="correo" title="correo" rel="nofollow">
+                        <img class="icono-menu" src="{#BASE_URL#}uploads/general/contacto_white.png" name="contacto" alt="contacto">
+                    </a>
+                </div>
+            </div>
+
+            <div id="form-contacto-movil">
+                <div class="contenedor-contacto-movil"><span id="btn-cerrar-contacto-movil">x</span></div>
+                <input class="input is-small" type="text" placeholder="Nombres y apellidos">
+                <input class="input is-small" type="text" placeholder="Correo">
+                <textarea class="textarea is-small" placeholder="Mensaje"></textarea>
+                <div class="contenedor-btn-contacto-movil">
+                    <button class="button is-link" id="btn-enviar-contacto-movil">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</nav>
+<nav class="submenu borde-lateral is-hidden-touch {#CLASE_SUBMENU#}" aria-hidden="{#ARIA-HIDDEN#}">
+    {#SUBMENU#}
+</nav>
+
+<div class="form-contacto" id="form-contacto">
+    <div class="contenedor-contacto"><span id="btn-cerrar-contacto">x</span></div>
+    <div id="interior-contacto">
+        <input class="input is-small" id="nom-contact" type="text" placeholder="Nombres y apellidos">
+        <input class="input is-small" id="corr-contact" type="text" placeholder="Correo">
+        <textarea class="textarea is-small" id="text-contact" placeholder="Mensaje"></textarea>
+        <div id="error-contacto" class="error-formulario"></div>
+        <div class="contenedor-btn-contacto">
+            <button class="button is-link" id="btn-enviar-contacto">Enviar</button>
+        </div>
+        <div id='recaptcha' class="g-recaptcha" data-sitekey="6Lf1XGYUAAAAACcDsiTQ1O15iarXMdt2PDvnKz60" data-callback="enviarContacto" data-size="invisible">
+        </div>
+    </div>
+</div>

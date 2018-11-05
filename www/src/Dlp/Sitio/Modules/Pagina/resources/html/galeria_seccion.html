@@ -1,0 +1,21 @@
+<div id="{#ALIAS_MODULO#}" class="modulo-galeria" data-seccion="{#TITULO#}" data-id-seccion="{#ID_SECCION#}"
+     data-tipo="{#TIPO_GALERIA#}">
+    <div class="columns is-gapless is-multiline {#POSICION#} {#COLOR#}">
+        <div class="column is-half imagen-destacada open-overlay" data-id="{#ID_PROYECTO#}">
+            {#IMAGEN#}
+
+            <div class="cuadro-transparente textos-media-lateral">
+                <h3 class="titulo-grilla1">{#TITULO1#}</h3>
+                <h2 class="titulo-grilla2">{#TITULO2#}</h2>
+                <p class="texto-grilla">{#COMUNA#}</p>
+                <p class="texto-grilla">{#CATEGORIA#}</p>
+            </div>
+        </div>
+        <div class="column is-half texto-cuadro">
+            <div class="texto-color"><h1 class="titulo titulo-cuadro">{#TITULO#}</h1></div>
+        </div>
+    </div>
+    <div class="galeria columns is-gapless is-multiline owl-carousel owl-theme {#COLOR#}">
+        {#GALERIA#}
+    </div>
+</div>

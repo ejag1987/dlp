@@ -1,0 +1,25 @@
+<form id="header-{#ID_MENU#}">
+    <div class="box slide column is-10" id="left">
+        <div class="form-group">
+            <label class="label">Titulo</label>
+            <p class="control">
+                <input id="titulo-{#ID_MENU#}" class="input" type="text" placeholder="Título" value="{#TITULO#}"
+                       data-validate="true" data-validation="text">
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group columns botones-titulo" data-bloque="titulo">
+        <div class="column is-5">
+            <br>
+            <button type="button" class="button is-primary guardatitulo" data-id="{#ID_MENU#}">GUARDAR</button>
+        </div>
+        <div class="column is-5">
+            <br>
+            <button type="button" class="button is-danger borrar" data-id="{#ID_MENU#}">ELIMINAR</button>
+        </div>
+        <div class="column is-5">
+            <div id="error-titulo-{#ID_HEADER#}" class="error"></div>
+        </div>
+    </div>
+</form>

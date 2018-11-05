@@ -1,0 +1,35 @@
+{
+  "name": "dlp/sitio",
+  "license": "",
+  "type": "project",
+    "description": "Sitio web DLP",
+    "keywords": [],
+    "homepage": "http://www.dlp.cl",
+    "authors": [
+      {
+        "name": "Francisca Nuñez",
+        "email": "fnunez@extend.cl",
+        "homepage": "http://www.extend.cl"
+      }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "vendor-dir": "./vendor"
+    },
+    "require": {
+        "php": ">=5.5",
+        "zcode/lighting" : "dev-master",
+        "phpmailer/phpmailer": "~5.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "Dlp\\Sitio\\": "src/Dlp/Sitio"
+        }
+    },
+    "repositories" : [
+        {
+            "type" : "vcs",
+            "url" : "git@gitlab.zcode.cl:zcode/lighting.git"
+        }
+    ]
+}

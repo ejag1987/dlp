@@ -1,0 +1,30 @@
+$body-background: $white !default;
+$body-size: 1rem !default;
+
+html {
+  background-color: $body-background;
+  font-size: $body-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+section {
+  display: block;
+}
+
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $font-family-regular;
+}
+
+

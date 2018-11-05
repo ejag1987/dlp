@@ -1,0 +1,35 @@
+<form id="slide-{#ID_SLIDE#}" class="column is-3">
+    <div class="box slide">
+        <div id="bloque-subir-slide-{#ID_SLIDE#}" class="bloque-subir" data-bloque="slide">
+            {#HTML_ACCION_ICONO#}
+        </div>
+        <div class="fomr-group">
+            <label class="label">Nombre</label>
+            <p class="control">
+                <input type="text" id="nombre-{#ID_SLIDE#}" class="input" placeholder="Nombre" value="{#NOMBRE#}" data-validate="true" data-validation="text">
+            </p>
+        </div>
+        <div class="form-group">
+            <label class="label">Texto</label>
+            <p class="control">
+                <input id="texto1-{#ID_SLIDE#}" class="input" type="text" placeholder="Linea 1" value="{#TEXTO1#}"
+                       data-validate="true" data-validation="text">
+            </p>
+            <p class="control">
+                <input id="texto2-{#ID_SLIDE#}" class="input" type="text" placeholder="Linea 2" value="{#TEXTO2#}"
+                       data-validate="true" data-validation="text">
+            </p>
+        </div>
+        <div class="form-group columns botones-slide" data-bloque="slide">
+            <div class="column is-4">
+                <button type="button" class="button is-primary guardaslide" data-id="{#ID_SLIDE#}">GUARDAR</button>
+            </div>
+            <div class="column is-4">
+                <button type="button" class="button is-danger borrar" data-id="{#ID_SLIDE#}">ELIMINAR</button>
+            </div>
+            <div class="column is-5">
+                <div id="error-slide-{#ID_SLIDE#}" class="error"></div>
+            </div>
+        </div>
+    </div>
+</form>

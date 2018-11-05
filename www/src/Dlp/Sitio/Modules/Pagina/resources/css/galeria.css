@@ -1,0 +1,306 @@
+.left-cuadro .imagen-destacada {
+    order: 1;
+}
+.left-cuadro .texto-cuadro {
+    order: 2;
+}
+
+.right-cuadro .imagen-destacada {
+    order: 2;
+}
+.right-cuadro .texto-cuadro {
+    order: 1;
+}
+.modulo-galeria .columns {
+    margin-bottom: 0 !important;
+}
+.imagen-destacada {
+    position: relative;
+    min-height: 49vw;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.imagen-destacada img {
+    width: 100%;
+}
+
+.modulo-galeria .texto-cuadro {
+    flex-direction: column;
+}
+.modulo-galeria .texto-cuadro .texto-color {
+    padding: 2vw 7.2vw;
+}
+.modulo-galeria .texto-cuadro {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modulo-galeria .titulo-grilla2 {
+    margin-bottom: 2.8vw;
+}
+
+.modulo-galeria .texto-grilla {
+    margin-top: 0;
+    line-height: initial;
+}
+
+.modulo-galeria .cuadro-transparente {
+    background: rgba(0,0,0,.85);
+}
+
+.modulo-galeria .texto-color {
+    width: 100%;
+}
+.galeria-item,
+.galeria-ver-mas {
+    position: relative;
+    line-height: 0;
+}
+
+.bloque-sobre,
+.bloque-sobre-boton {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.titulo-categoria {
+    text-align: center;
+    padding: 2vw 1vw;
+    width: 67%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo-categoria .titulo-grilla2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.bloque-sobre-boton .titulo-categoria {
+    background-color: transparent !important;
+}
+
+.lightbox {
+    align-items: center;
+    display: flex;
+}
+.modal-content {
+    width: 100%;
+    padding: 3vw;
+}
+
+.modal-galeria {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-galeria .imagen img {
+    max-height: 83vh;
+}
+.modal-externo {
+    display: flex;
+}
+
+.volver {
+    cursor: pointer;
+    line-height: 100%;
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.volver img,
+.link-inmobiliaria img {
+    width: 17px;
+    margin-right: .5vw;
+}
+
+.paginador {
+    cursor: pointer;
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inmobiliaria {
+    font-size: 90%;
+}
+.inmobiliaria a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.inmobiliaria a span {
+    text-decoration: underline;
+}
+
+.proyectos {
+    padding: 1vw;
+}
+.titulo-proyecto,
+.comuna-proyecto {
+    text-align: center;
+}
+.proyecto-item {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.galeria-proyectos .subtitulo-categoria {
+    padding-top: 2vh;
+}
+
+.galeria-proyectos.header-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 1vw;
+}
+.galeria-proyectos .pagina-anterior {
+    margin-right: 1vw;
+}
+.subtitulo-categoria.chiquitita {
+    font-size: 95%;
+}
+
+
+.noscroll { overflow: hidden; }
+
+@media (min-device-width: 1025px) {
+    .noscroll {
+        padding-right: 15px;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0, .9);
+}
+
+#lightbox[aria-hidden="true"] {
+    transition: opacity 1s, z-index 0s 1s;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0;  }
+
+#lightbox[aria-hidden="false"] {
+    transition: opacity 1s;
+    width: 100%;
+    z-index: 10000;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 929px) {
+    .modulo-galeria .columns.is-gapless.is-multiline {
+        display: flex;
+        flex-direction: column;
+    }
+    .modulo-galeria .texto-cuadro .texto-color {
+        padding-bottom: 6vh !important;
+        padding-top: 6vh !important;
+    }
+
+    .modulo-galeria .texto-cuadro {
+        order: 1;
+        display: block;
+    }
+    .modulo-galeria .imagen-destacada {
+        /*order: 2;
+        min-height: inherit;*/
+        display: none;
+    }
+
+    .modal-galeria {
+        flex-direction: column;
+        position: relative;
+        padding-top: 14vh;
+    }
+    .modal-galeria .header-modal {
+        order: 2;
+        width: 100%;
+        max-width: inherit;
+    }
+    .header-modal > div {
+        padding-bottom: 4vh;
+    }
+    .modal-galeria .breadcrumbs-imagen {
+        padding-top: 0;
+    }
+
+    .modal-galeria .imagen {
+        order: 1;
+    }
+    .volver {
+        position: absolute;
+        top: 4vh;
+    }
+    .paginador {
+        position: absolute;
+        top: 8vh;
+        width: 100%;
+    }
+    .modal-galeria .bloque-derecha {
+        padding: 0;
+    }
+
+    .galeria-ver-mas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .galeria .owl-item {
+        height: 100vw;
+    }
+
+    .galeria-item {
+        padding: 0;
+    }
+
+    .galeria .owl-dots {
+        position: absolute;
+        bottom: 7px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .modal-content {
+        max-height: 100vh;
+    }
+
+    .breadcrumbs-imagen {
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+
+    .galeria-proyectos.header-modal {
+        display: block;
+    }
+    .galeria-proyectos .header-titulos {
+        display: block;
+    }
+
+    .galeria-proyectos .paginador {
+        position: relative;
+        top: auto;
+
+    }
+}

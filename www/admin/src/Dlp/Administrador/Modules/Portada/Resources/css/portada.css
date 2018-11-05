@@ -1,0 +1,48 @@
+.titulos {
+    width: 80px;
+}
+
+.boton-agregar {
+    margin: 0.75rem 0;
+}
+
+.botones-slide {
+    margin-top: 0.75rem;
+}
+
+.bloque-slides,
+.bloque-calugas {
+    flex-wrap: wrap;
+}
+
+.fondo-verde,
+.fondo-darkgrey,
+.fondo-rojo
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.fondo-verde {
+    background: #1a7d80 ;
+}
+
+.fondo-verde-opacity {
+    color: #8ad8d8;
+}
+
+.fondo-darkgrey {
+    background: #37383a;
+}
+
+.fondo-darkgrey-opacity {
+    color: #b5b5b7;
+}
+
+.fondo-rojo {
+    background: #cd2e1b;
+}
+
+.fondo-rojo-opacity {
+    color: #f2a49b;
+}

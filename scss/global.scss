@@ -1,0 +1,792 @@
+@charset "utf-8";
+
+// 1. Import the initial variables
+@import "../sass/utilities/initial-variables";
+@import "../sass/utilities/functions";
+@import "utilities/mixin";
+
+//@import "../sass/utilities/_all";
+@include font-face("RalewayRegular",    '../fonts/RalewayRegular');
+@include font-face("RalewayBold",       '../fonts/RalewayBold');
+@include font-face("RalewayBlack",      '../fonts/RalewayBlack');
+@include font-face("RalewayExtraLight", '../fonts/RalewayExtraLight');
+@include font-face("RalewayExtraBold",  '../fonts/RalewayExtraBold');
+@include font-face("RalewayMedium",     '../fonts/RalewayMedium');
+
+:root {
+  font-size: 18px;
+}
+
+// 2. Set your own initial variables.
+$red:          rgb(205, 46, 27);
+$green:        rgb(26, 125, 128);
+$cyan:         rgb(17, 83, 111);
+$blue:         rgb(8, 70, 91);
+
+$grey-lighter: rgb(232, 232, 232);
+$grey-light:   rgb(201, 201, 201);
+$grey:         rgb(182, 182, 182);
+$grey-darker:  rgb(29, 29, 27);
+
+$black-ter:    rgb(55, 56, 58);
+$black-bis:    rgb(26, 26, 25);
+$black:        rgb(0, 0, 0);
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-regular: "RalewayRegular", "Helvetica Neue", Arial, sans-serif;
+$font-family-bold: "RalewayBold", "Helvetica Neue", Arial, sans-serif;
+$font-family-extrabold: "RalewayExtraBold", "Helvetica Neue", Arial, sans-serif;
+$font-family-extralight: "RalewayExtraLight", "Helvetica Neue", Arial, sans-serif;
+$font-family-black: "RalewayBlack", "Helvetica Neue", Arial, sans-serif;
+$font-family-medium: "RalewayMedium", "Helvetica Neue", Arial, sans-serif;
+
+// 3. Set the derived variables
+$family-sans-serif: $font-family-regular;
+$family-primary:  $font-family-regular;
+
+$primary: $green;
+$info: $cyan;
+
+$navbar-item-color: $white;
+
+// TAMAÑO FUENTES
+$menu:    1.22rem; // 22px
+$submenu: 0.94rem; // 17px
+$idioma:  0.88rem; // 16px
+
+// Responsiveness
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 960px;
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap);
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap);
+$widescreen-enabled: true;
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap);
+$fullhd-enabled: true;
+
+$footer-background-color: $cyan;
+
+@import "../sass/utilities/derived-variables";
+
+// 6. Import the rest of Bulma
+@import "../sass/bulma";
+@import '../sass/components/extension-steps';
+
+$info: $cyan;
+
+
+html.has-navbar-fixed-top, body.has-navbar-fixed-top {
+  padding-top: 6vw;
+}
+html {
+  overflow: visible;
+}
+
+/*.bloqueo-scroll {
+  overflow: hidden;
+  height: 100vh;
+} */
+
+.top-menu {
+  flex-direction: column;
+}
+
+a {
+  outline: none;
+}
+
+@include desktop {
+  .navbar-center {
+    align-items: stretch;
+    display: flex;
+  }
+}
+
+strong {
+  color: inherit;
+}
+
+.navbar {
+  box-shadow: none;
+  min-height: 4.5vw;
+}
+.navbar-brand {
+  min-height: 4.5vw;
+}
+
+.navbar-center {
+  justify-content: center;
+  margin-right: auto;
+  width: 100%;
+}
+
+.menu-superior {
+  background-color: $cyan;
+  color: $white;
+}
+
+.menu .navbar-item {
+  font-family: $font-family-bold;
+  @include responsive-font(1vw, 15px, 26px);
+}
+
+.item-menu {
+  padding: 1vw;
+  margin: 0 1.8vw;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.item-menu a {
+  /*-moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;*/
+
+  /*-moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);*/
+}
+
+.item-menu:hover a {
+  // align-items: center;
+  font-weight: normal;
+
+  /*-moz-transform: translateY(-1.1vw);
+  -ms-transform: translateY(-1.1vw);
+  -webkit-transform: translateY(-1.1vw);
+  transform: translateY(-1.1vw);*/
+}
+
+.item-menu .navbar-item {
+  padding: 0 0.75rem;
+}
+.item-menu.is-active {
+  align-items: center;
+}
+
+.menu .is-active a {
+  color: $white;
+  border-right: 1px solid $white;
+  border-left: 1px solid $white;
+}
+
+.menu .is-active:hover a {
+  /*-moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);*/
+}
+
+.menu .is-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 41%;
+  width: 0;
+  height: 0;
+  border-left: 0.7vw solid transparent;
+  border-right: 0.7vw solid transparent;
+  border-bottom: 0.7vw solid $red;
+}
+
+a.navbar-item:hover,
+.navbar-link:hover {
+  background-color: transparent;
+  color: inherit;
+  opacity: .5;
+}
+
+.idioma {
+  align-items: center;
+}
+
+.idioma .navbar-item {
+  @include responsive-font(1vw, 12px, $idioma);
+  background-color: $blue;
+}
+
+.img-idioma {
+  padding-left: 1rem;
+  box-sizing: content-box;
+}
+
+.navbar.is-info .navbar-brand > a.navbar-item:hover,
+.navbar.is-info .navbar-brand > a.navbar-item.is-active,
+.navbar.is-info .navbar-brand .navbar-link:hover,
+.navbar.is-info .navbar-brand .navbar-link.is-active {
+  background-color: transparent;
+}
+
+.navbar > .container .navbar-brand,
+.container > .navbar .navbar-brand {
+  margin-left: 0;
+}
+.navbar-brand .navbar-item {
+  padding: 0;
+}
+.navbar-brand img {
+  width: 10vw !important;
+  max-height: 60px;
+  max-width: 130px;
+}
+
+.borde-lateral {
+  padding-left: 7.2vw;
+}
+
+.navbar-item img {
+
+}
+
+.submenu {
+  background-color: $blue;
+  color: $white;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.submenu a {
+  color: $white;
+  @include responsive-font(1vw, 14px, 17px);
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+.submenu a:first-child {
+  padding-left: 0;
+}
+
+.submenu a:last-child {
+  padding-right: 0;
+}
+
+.submenu a:hover {
+  background-color: transparent;
+  color: inherit;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+.link-inmobiliaria:hover,
+.volver:hover,
+.pagina-anterior:hover,
+.pagina-siguiente:hover {
+  background-color: transparent;
+  color: inherit;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+
+.submenu a.is-active {
+  background-color: transparent;
+  color: inherit;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+
+.container.is-fluid {
+  margin-left: 7.2vw;
+  margin-right: 7.2vw;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.footer {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.menu-footer {
+  padding: 6.8rem 0;
+}
+
+.item-footer-menu {
+  color: $white;
+  font-family: $font-family-bold;
+  @include responsive-font(1vw, 18px, 26px);
+}
+.item-footer-menu:hover {
+  background-color: transparent;
+  color: $white;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+
+.item-footer-submenu a {
+  color: $white;
+  font-family: $font-family-regular;
+  @include responsive-font(.5vw, 14px, 17px);
+}
+.item-footer-submenu a:hover {
+  background-color: transparent;
+  color: $white;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+
+.sidebar-footer {
+  background-color: $blue;
+  padding: 3.1rem 0;
+}
+
+.anexos {
+  margin-bottom: 2vw;
+}
+
+.anexo-footer a {
+  color: $white;
+  font-family: $font-family-regular;
+  @include responsive-font(.5vw, 14px, 17px);
+  display: flex;
+  align-items: center;
+  margin-bottom: .25vw;
+}
+.anexo-footer:hover {
+  background-color: transparent;
+  color: $white;
+  opacity: .5;
+  transition: all 0.3s ease;
+}
+
+.anexo-footer object {
+
+}
+.anexo-footer span {
+  flex: 1;
+}
+
+.anexo-footer {
+
+}
+
+.icono-menu {
+  width: 2.7vw;
+  margin-right: 1vw;
+}
+
+body {
+  @include responsive-font(1vw, 14px, 18px);
+}
+
+
+/** COLORES MODULOS **/
+.fondo-verde {
+  background-color: $green;
+  border-color: $green;
+  color: $white;
+
+  & h1.titulo:after {
+    background-color: $white;
+  }
+
+  & .imagen-modulo {
+    border-color: $green;
+  }
+}
+.fondo-gris {
+  background-color: $grey-light;
+  border-color: $grey-light;
+  color: $black-ter;
+
+  & h1.titulo:after {
+    background-color: $black-ter;
+  }
+
+  & .imagen-modulo {
+    border-color: $grey-light;
+  }
+}
+.fondo-rojo {
+  background-color: $red;
+  border-color: $red;
+  color: $white;
+
+  & h1.titulo:after {
+    background-color: $white;
+  }
+
+  & .imagen-modulo {
+    border-color: $red;
+  }
+}
+.fondo-azul {
+  background-color: $blue;
+  border-color: $blue;
+  color: $white;
+
+  & h1.titulo:after {
+    background-color: $white;
+  }
+
+  & .imagen-modulo {
+    border-color: $blue;
+  }
+}
+.fondo-darkgrey {
+  background-color: $black-ter;
+  border-color: $black-ter;
+  color: $white;
+
+  & h1.titulo:after {
+    background-color: $white;
+  }
+
+  & .imagen-modulo {
+    border-color: $black-ter;
+  }
+}
+
+.titulo {
+  font-family: $font-family-extrabold;
+  @include responsive-font(3.1vw, 30px, 60px);
+  position: relative;
+  margin-bottom: 2vw;
+  line-height: initial;
+}
+
+
+h1.titulo:after {
+  content: '';
+  width: 7.4vw;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.fondo-gris h1.titulo:after {
+  background-color: $black-ter;
+}
+
+.titulo-opacity {
+  opacity: .56;
+}
+
+.titulo-pequeño {
+  font-family: $font-family-extrabold;
+  @include responsive-font(2.7vw, 25px, 52px);
+  position: relative;
+  line-height: initial;
+}
+.texto-grande {
+  font-family: $font-family-extrabold;
+  @include responsive-font(5.1vw, 40px, 99px);
+  position: relative;
+  line-height: initial;
+}
+.texto-medio {
+  font-family: $font-family-extrabold;
+  @include responsive-font(2.08vw, 20px, 40px);
+  position: relative;
+  line-height: initial;
+}
+.texto-chico {
+  font-family: $font-family-regular;
+  @include responsive-font(1.3vw, 14px, 25px);
+  position: relative;
+  line-height: initial;
+}
+.caluga-cifra a {
+  color: inherit;
+}
+
+.texto-imagen {
+  position: relative;
+
+  &.fondo-negro .cuadro-transparente {
+    background-color: rgba($black, .85);
+    color: $white;
+  }
+  &.fondo-verde .cuadro-transparente {
+    background-color: rgba($blue, .85);
+    color: $white;
+  }
+  &.fondo-negro .textos-caja {
+    background-color: rgba($black, .85);
+    color: $white;
+  }
+  &.fondo-verde .textos-caja {
+    background-color: rgba($blue, .85);
+    color: $white;
+  }
+}
+
+.cuadro-transparente {
+  width: 19.7vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 3.75vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.imagen-destacada .textos-media-lateral {
+  min-width: 19.7vw;
+  max-width: 25vw;
+  width: auto;
+}
+.textos-caja {
+  width: 19.5vw;
+  min-height: 8.3vw;
+  padding: 1.04vw 3.75vw;
+  position: absolute;
+  bottom: 3.2vw;
+}
+
+/** MODULOS **/
+.titulo1-slide {
+  font-family: $font-family-black;
+  @include responsive-font(2.9vw, 30px, 57px);
+  text-shadow: 2px 2px 12px rgba(150, 150, 150, 1);
+}
+.titulo2-slide {
+  font-family: "RalewayExtraLight", "Helvetica Neue", Arial, sans-serif;
+  @include responsive-font(4.7vw, 35px, 93px);
+  text-shadow: 2px 2px 12px rgba(150, 150, 150, 1);
+}
+
+.titulo-caluga {
+  font-family: $font-family-extrabold;
+  @include responsive-font(3.1vw, 30px, 60px);
+}
+/*.titulo-header {
+  font-family: $font-family-extralight;
+  @include responsive-font(3.1vw, 30px, 60px);
+}*/
+.titulo-grilla1 {
+  font-family: $font-family-regular;
+  @include responsive-font(1.5vw, 18px, 29px);
+  line-height: initial;
+}
+.titulo-grilla2 {
+  font-family: $font-family-extrabold;
+  @include responsive-font(1.8vw, 19px, 38px);
+  line-height: initial;
+}
+.titulo-grilla2 span {
+  font-family: $font-family-regular;
+  @include responsive-font(1.8vw, 19px, 38px);
+  line-height: initial;
+}
+.texto-vermas {
+  font-family: $font-family-regular;
+  @include responsive-font(1.2vw, 14px, 26px);
+  line-height: initial;
+  padding-top: 1vw;
+}
+.subtitulo-categoria {
+  font-family: $font-family-medium;
+  @include responsive-font(1.3vw, 16px, 20px);
+  line-height: initial;
+}
+.titulo-proyecto {
+  font-family: $font-family-bold;
+  @include responsive-font(1.8vw, 18px, 35px);
+  line-height: initial;
+  text-transform: uppercase;
+}
+.comuna-proyecto {
+  font-family: $font-family-regular;
+  @include responsive-font(1.1vw, 14px, 18px);
+  line-height: initial;
+  text-transform: uppercase;
+}
+
+.texto-grilla {
+  margin-top: 2.8vw;
+}
+
+.color-rojo {
+  color: $red;
+
+  & h1.titulo:after {
+    background-color: $red;
+    height: 2px;
+  }
+
+  & .texto {
+    color: $black-ter;
+  }
+}
+
+.titulo-valores {
+  font-family: $font-family-regular;
+  @include responsive-font(1.09vw, 18px, 21px);
+  color: $red;
+  text-align: center;
+  margin-bottom: 1.9vw;
+
+  & strong {
+    font-family: $font-family-extrabold;
+    color: $red;
+  }
+}
+
+.borde-icono {
+  border: $red solid 2px;
+  border-radius: 50%;
+  width: 8.5vw;
+  height: 8.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.9vw;
+
+  & .icono {
+    font-family: $font-family-extrabold;
+    @include responsive-font(6vw, 50px, 116px);
+    line-height: initial;
+    height: 8.5vw;
+  }
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "-";
+  padding-right: 0.6em;
+}
+
+/* GRAFICO */
+.color-verde {
+  .chart__bar {
+    fill: $green;
+  }
+}
+
+.color-azul {
+  .chart__bar {
+    fill: $blue;
+  }
+}
+
+.chart__axis text {
+  font-family: $font-family-regular;
+  @include responsive-font(1.25vw, 16px, 20px);
+}
+.breadcrumbs-imagen {
+  @include responsive-font(1.3vw, 12px, 20px);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 3vw;
+  height: 3vw;
+  min-width: 50px;
+  min-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+  opacity: 0; }
+
+#back-to-top.show {
+  opacity: 1; }
+
+
+/** GALERIAS **/
+.galeria-item:nth-child(odd) .titulo-categoria {
+  background-color: rgba($green, .85);
+}
+.galeria-item:nth-child(even) .titulo-categoria {
+  background-color: rgba($black, .85);
+}
+
+.lightbox {
+  color: $white;
+  z-index: 10000;
+}
+.modal-galeria .header-modal {
+  cursor: default;
+  background-color: $blue;
+  padding: 2vw;
+  min-width: 20%;
+  max-width: 25%;
+  width: 36vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-galeria .imagen {
+  line-height: 0;
+}
+
+.steps .step-item .step-marker {
+  background: $grey;
+  border: 0.2em solid $grey;
+}
+.steps .step-item.is-completed .step-marker {
+  background-color: $grey;
+}
+
+.steps .step-item.is-active .step-marker {
+  border: 0.2em solid $grey;
+  color: $grey;
+}
+.button {
+  border-radius: 0;
+  background: $blue !important;
+  color: $white !important;
+}
+
+.steps .step-item::before {
+  background: $grey;
+}
+
+
+@media only screen and (max-width: 1023px) {
+  .navbar-menu {
+    background: $grey-darker;
+  }
+  .section-content {
+    .texto-header,
+    .bloque-texto,
+    .texto-cuadro {
+      padding-top: 10vh !important;
+      padding-bottom: 10vh !important;
+    }
+  }
+
+  .bloque-grilla .texto-imagen:nth-child(odd) .cuadro-transparente {
+    background-color: rgba($green, .85);
+  }
+  .bloque-grilla .texto-imagen:nth-child(even) .cuadro-transparente {
+    background-color: rgba($black, .85);
+  }
+
+  .cuadro-transparente {
+    width: 46vw;
+    max-width: 41%;
+  }
+
+  .separador {
+    display: none;
+  }
+
+  .owl-item:nth-child(odd) .titulo-categoria {
+    background-color: rgba($green, .85);
+  }
+  .owl-item:nth-child(even) .titulo-categoria {
+    background-color: rgba($black, .85);
+  }
+}

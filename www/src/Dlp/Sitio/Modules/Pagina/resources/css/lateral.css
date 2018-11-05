@@ -1,0 +1,30 @@
+.bloque-grilla.columns.is-gapless:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.texto-cuadro {
+    display: flex;
+    align-items: center;
+}
+.bloque-texto {
+    padding: 7vw 7.2vw;
+}
+
+.imagen-caluga-fondo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    line-height: 0;
+}
+.imagen-caluga-fondo img {
+    width: 100%;
+}
+.textos-media-lateral {
+    position: absolute;
+}
+
+@media only screen and (max-width: 929px) {
+    .textos-caja {
+        width: 46vw;
+    }
+}

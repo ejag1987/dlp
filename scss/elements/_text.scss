@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+.light {
+  font-family: $font-family-light;
+}
+.black {
+  font-family: $font-family-black;
+}
+.dark {
+  color: $black;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-center {
+  text-align: center;
+}
+
+
+.destacado {
+  font-size: $destacado;
+
+  @media screen and (max-width: 480px) {
+    font-size: 120%;
+  }
+}
+
+h1 {
+  @include responsive-font(4vw, 35px, 70px);
+  margin: 0 0.2rem;
+  display: inline-block;
+  line-height: 95%;
+}
+
+h2 {
+  @include responsive-font(4vw, 23px, 45px);
+  margin: 0;
+  display: inline-block;
+}
+
+
+h3 {
+  font-size: $h3;
+  margin: 0;
+}
+
+h4 {
+  @include responsive-font(4vw, 33.75px, 70px);
+  margin: 0;
+  text-align: center;
+
+  @each $name, $fondo in $background {
+    &.bg-#{$name} {
+      background-color: transparent;
+      color: $fondo;
+    }
+  }
+}
+
+h5 {
+  font-family: $font-family-black;
+  @include responsive-font(4vw, 18px, 25px);
+  margin: 0;
+}
+
+h6 {
+  @include responsive-font(1.5vw, 15px, 24px);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.texto {
+  @include responsive-font(2vw, 20px, 25px);
+
+  @media screen and (max-width: 480px) {
+    text-align: left;
+  }
+}
+
+
+.home .texto {
+  @include responsive-font(2vw, 17px, 25px);
+}
+
+.caluga-color {
+  align-items: left;
+
+  & h4 {
+    @include responsive-font(3vw, 25px, 57px);
+    font-family: $font-family-bold;
+    line-height: 100%;
+    text-align: left;
+  }
+
+  & .cuadro-cita {
+    margin: 0;
+  }
+
+  & .cita {
+    @include responsive-font(1.2vw, 15px, 23px);
+    line-height: 146%;
+
+    p {
+      margin-bottom: 5vh;
+      margin-top: 3vh;
+      font-family: $font-family-regular;
+      font-weight: 500;
+    }
+  }
+  .boton {
+    @each $name, $fondo in $background {
+      &.bg-#{$name} {
+        background-color: transparent;
+        border-color: $fondo;
+        color: $fondo;
+
+        & a {
+          border-color: $fondo;
+
+          &:hover {
+            background-color: $fondo;
+            color: #ffffff;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.bloque-cliente {
+  & .texto {
+    font-family: $font-family-light;
+    @include responsive-font(2vw, 18px, 20px);
+  }
+}
+
+.boton a {
+  @include responsive-font(2vw, 16px, 25px);
+}
+
+strong {
+  font-weight: normal;
+  font-family: $font-family-bold;
+}
+
+.subtitulo {
+  @include responsive-font(1.2vw, 13px, 20px);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: left;
+  width: 100%;
+  padding-left: 2vw;
+
+}
+
+.cita {
+  font-family: $font-family-light;
+  @include responsive-font(1.5vw, 15px, 20px);
+  color: $white;
+  position: relative;
+
+  & strong {
+    font-size: 110%;
+    @media screen and (max-width: 480px) {
+      font-size: 105%;
+    }
+  }
+
+  &.cita-destacado {
+    font-size: $size9;
+    margin-bottom: .5rem;
+    font-family: $font-family-bold;
+  }
+}
+
+.header .cita{
+  @include responsive-font(4vw, 20px, 30px);
+}
+
+.header-titulo h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+.contenido-cita {
+  @media screen and (max-width: 840px) {
+    & .txt-right {
+      text-align: left;
+    }
+  }
+
+  & h1 {
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  }
+}
+
+.header-cita,
+.header-titulo {
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.header-cita .cita{
+  @include responsive-font(3vw, 23px, 40px);
+  font-family: $font-family-madium;
+  line-height: 129%;
+}
+
+.cuadro-cita {
+  font-size: $size11;
+}
+.content-cita {
+  font-family: $font-family-bold;
+  font-size: $size9;
+
+  & .cita {
+    @include responsive-font(2vw, 21px, 30px);
+    font-family: $font-family-bold;
+    display: inline-block;
+  }
+}
+.bg-blanco .cita {
+  color: $black;
+}
+
+@media screen and (max-width: 720px) {
+  .cita-hide {
+    display: none;
+  }
+}
+
+q:before {
+  font-family: $font-family-quotes;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -.4em;
+  content: '“';
+}
+
+q:after {
+  font-family: $font-family-quotes;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -.6em;
+  content: '”';
+}
+
+.referencia {
+  text-align: left;
+  display: flex;
+  justify-content: flex-end;
+  color: $white;
+  margin-top: 0.9vw;
+
+  font-family: $font-family-light;
+  @include responsive-font(1.2vw, 13px, 18px);
+
+  & strong {
+    font-size: 110%;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+.content-cita .referencia {
+  font-size: 70%;
+  text-align: center;
+  justify-content: center;
+
+  & p {
+    margin: 0;
+  }
+}
+.bg-blanco .referencia {
+  color: $black;
+}
+
+.texto-servicio {
+  @include responsive-font(1.5vw, 15px, 18px);
+}
+
+
+/*********************
+******** MENU ********
+**********************/
+.menu {
+  background: $white;
+}
+
+.menu-1 {
+  font-size: $size11;
+  font-family: "RobotoLight", "Helvetica Neue", Arial, sans-serif;
+  /*color: $black;*/
+}
+.menu-2 {
+  font-size: $size11;
+  font-family: "RobotoBlack", "Helvetica Neue", Arial, sans-serif;
+  color: $naranja;
+}
+.lista-menu:hover {
+  & a {
+    border-bottom: 2px solid rgb(102,102,102);
+
+    & .menu-2 {
+      color: #666;
+    }
+  }
+}
+
+
+.selected {
+  border-bottom: 2px solid rgb(102,102,102);
+  & .menu-2 {
+    color: #666;
+  }
+}
+
+
+.contacto {
+  font-size: 0.6rem;
+  color: #666;
+}
+.contacto h5 {
+  font-family: $font-family-regular;
+  color: #666;
+}
+.contacto a.mail {
+  color: $naranja !important;
+}
+.contacto a.mail:hover {
+  color: #666 !important;
+}
+
+.texto-medio {
+  @include responsive-font(3vw, 20px, 34px);
+}

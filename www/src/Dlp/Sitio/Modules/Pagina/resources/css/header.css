@@ -1,0 +1,100 @@
+.header-pagina .columns.is-gapless:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.header-color {
+    margin: 0;
+    padding: 0;
+}
+.imagen-header {
+    position: relative;
+}
+.texto-header {
+    display: flex;
+    align-items: center;
+}
+
+.left-header .imagen-header {
+    order: 1;
+}
+.left-header .texto-header {
+    order: 2;
+}
+.left-header .imagen-header:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-top: 0 solid transparent;
+    border-right-style: solid;
+    border-right-width: 6.6vw;
+    border-right-color: inherit;
+    border-bottom: 6.6vw solid transparent;
+    border-left: 0 solid transparent;
+
+}
+
+.right-header .imagen-header {
+    order: 2;
+}
+.right-header .texto-header {
+    order: 1;
+}
+.right-header .imagen-header:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border-top-style: solid;
+    border-top-width: 6.6vw;
+    border-top-color: inherit;
+    border-right: 6.6vw solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 0 solid transparent;
+}
+
+.imagen-header {
+    line-height: 0;
+}
+
+.titulo-header {
+    margin-bottom: 2vw;
+    position: relative;
+    line-height: initial;
+}
+
+.texto-color {
+    color: #ffffff;
+    padding: 7vw 7.2vw;
+}
+
+@media only screen and (max-width: 929px) {
+    .right-header .imagen-header:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 0;
+
+        border-top: solid 17vw transparent;
+        border-right: solid 0 transparent;
+        border-bottom: solid 0 transparent;
+        border-left-style: solid;
+        border-left-width: 20vw;
+        border-left-color: inherit;
+
+    }
+
+    .column.is-half.texto-header.cuadro-fondo {
+        padding-bottom: 6vh !important;
+        padding-top: 6vh !important;
+    }
+}

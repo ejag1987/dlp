@@ -1,0 +1,15 @@
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+#botones {
+float: right;
+}
+
+#contenido {
+    display: none;
+}

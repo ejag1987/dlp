@@ -1,0 +1,276 @@
+.home.sin-logo {
+    display: none;
+}
+.home.sin-logo a {
+    display: none;
+}
+.navbar-burger span {
+    background-color: #fff;
+}
+#menu {
+    display: none;
+}
+
+.navbar-end.idioma .navbar-item {
+    background-color: transparent;
+    font-family: "RalewayRegular", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+}
+
+.navbar-end.idioma a:hover {
+    background-color: transparent;
+}
+
+.navbar-end.idioma .navbar-item img{
+    padding-left: 0;
+}
+
+.navbar-end.idioma .anexo-menu {
+    margin-right:15px;
+}
+
+.navbar-end.idioma .navbar-item:hover {
+    background-color: transparent !important;
+}
+
+.anexo-menu a {
+    color: white;
+    font-family: "RalewayRegular", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.5vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: .25vw;
+}
+
+.navbar-end.idioma .anexo-menu .icono-menu {
+    width: 28px;
+    height: 18px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.form-contacto {
+    color: #FFF;
+    background-color: rgba(17, 83, 111, 0.85);
+    padding: 0.1rem 1rem 0.5rem;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    font-size: 0.75rem;
+    display: none;
+}
+
+.form-contacto input, .form-contacto textarea {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+    border: 0;
+}
+
+.form-contacto input::placeholder, .form-contacto textarea::placeholder {
+    color: #FFF;
+    opacity: 1;
+}
+
+.mensaje-contacto {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.contenedor-contacto {
+    text-align: right;
+}
+
+#btn-cerrar-contacto {
+    cursor: pointer;
+}
+
+#btn-cerrar-contacto:hover {
+    text-decoration: underline;
+}
+
+.form-contacto .contenedor-btn-contacto {
+    text-align: center;
+}
+
+#btn-enviar-contacto {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    border-color: #FFF;
+    background-color: rgba(17, 83, 111, 0.1) !important;
+    font-size: 0.75rem;
+}
+
+#btn-enviar-contacto:hover {
+    opacity: 0.5;
+}
+
+#form-contacto-movil {
+    background-color: #1d1d1b;
+    padding: 0.1rem 1rem 0.5rem;
+    display: none;
+    position: absolute;
+}
+
+#form-contacto-movil input, #form-contacto-movil textarea {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+    border: 0;
+}
+
+#form-contacto-movil input::placeholder, #form-contacto-movil textarea::placeholder {
+    color: #FFF;
+    opacity: 1;
+}
+
+.error-formulario {
+    color: #FFF;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contenedor-contacto-movil {
+    text-align: right;
+}
+
+#btn-cerrar-contacto-movil {
+    cursor: pointer;
+}
+
+#btn-cerrar-contacto-movil:hover {
+    text-decoration: underline;
+}
+
+.contenedor-btn-contacto-movil {
+    text-align: center;
+}
+
+#btn-enviar-contacto-movil {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    border-color: #FFF;
+    background-color: rgba(17, 83, 111, 0.1) !important;
+    font-size: 0.75rem;
+}
+
+#btn-enviar-contacto-movil:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 1023px) {
+    .home.sin-logo {
+        display: flex;
+    }
+    .navbar-brand.sin-logo a {
+        display: block;
+    }
+
+    .navbar-brand .navbar-item {
+        width: 28vw !important;
+    }
+    .navbar-brand img {
+        width: 100% !important;
+        max-width: inherit;
+        height: 30px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        position: relative;
+    }
+    .navbar-burger {
+        margin-left: inherit;
+        position: absolute;
+        right: 0;
+    }
+
+    #menu.is-active {
+        display: block;
+        padding-bottom: 10vh;
+    }
+
+    .navbar.is-fixed-bottom, .navbar.is-fixed-top {
+        z-index: 10000;
+    }
+
+    .menu-movil {
+        border-bottom: 1px solid #ffffff;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .navbar-dropdown .navbar-item {
+        padding-left: 0;
+    }
+    .menu-movil .navbar-item, .menu-movil .navbar-link {
+        padding: 0.5rem 0;
+        position: relative;
+        display: inline-block;
+    }
+    .menu-movil .navbar-dropdown .navbar-item {
+        display: block;
+    }
+    .menu-movil .item-menu {
+        margin: 0;
+    }
+    .menu-movil .navbar-dropdown {
+        padding-top: 0;
+    }
+    .menu-movil .marca-submenu {
+        right: 0;
+        font-size: 216%;
+        line-height: 50%;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0.5rem 0;
+        position: absolute;
+    }
+    .menu-movil .navbar-dropdown {
+        display: none;
+    }
+
+    .anexos-movil {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .anexos-movil .navbar-item {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-item.idioma {
+        align-self: center;
+        font-family: "RalewayRegular", "Helvetica Neue", Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    .anexos-movil .img-idioma {
+        padding-left: 0;
+    }
+
+    .anexos-movil .icono-menu {
+        margin-right: 0;
+    }
+
+    .navbar-item.anexo-menu {
+        align-self: center;
+        height: 40px;
+    }
+
+    .navbar-item.anexo-menu img {
+        width: 28px;
+        height: 18px;
+    }
+}

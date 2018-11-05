@@ -1,0 +1,40 @@
+<section class="section box box-border-info">
+
+
+    <div id="contenido-caluga" class="edicion"> </div>
+
+
+    <form id="header-{#ID_CALUGA#}" class="column is-6">
+        <div class="box slide">
+            <h1 class="title is-4">Cuadro de Texto</h1>
+            <div class="form-group">
+                <label class="label">Título</label>
+                <p class="control">
+                    <input id="titulo-{#ID#}" class="input" type="text" placeholder="Título" value=""
+                           data-validate="true" data-validation="text">
+                </p>
+            </div>
+            <div class="form-group">
+                <label class="label">Texto</label>
+                <p class="control">
+                    <textarea name="texto-{#ID#}" id="comentario-{#ID#}" cols="30" rows="5" placeholder="Texto de la caluga" data-validate="true" data-validation="text" class="input textarea" maxlength="80">{#TEXTO#}</textarea>
+                </p>
+            </div>
+
+
+            <div class="form-group columns botones-slide" data-bloque="caluga">
+                <div class="column is-4">
+                    <br>
+                    <button type="button" class="button is-primary guardar" data-id="{#ID_CALUGA#}">GUARDAR</button>
+                </div>
+                <div class="column is-4">
+                    <br>
+                    <button type="button" class="button is-danger borrar" data-id="{#ID_CALUGA#}">ELIMINAR</button>
+                </div>
+                <div class="column is-5">
+                    <div id="error-caluga-{#ID_CALUGA#}" class="error"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

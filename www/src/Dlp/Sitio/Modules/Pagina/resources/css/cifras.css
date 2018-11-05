@@ -1,0 +1,46 @@
+.bloque-cifras {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    max-width: 100%;
+    overflow: hidden;
+}
+.caluga-cifra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.caluga-cifra.is-3 {
+    height: 25vw;
+}
+.caluga-cifra.is-half {
+    height: 18vw;
+}
+.titulo-pequeño {
+
+}
+.texto-grande {
+    display: inline-block;
+}
+.texto-medio {
+    display: inline-block;
+}
+.texto-chico {
+
+}
+.cifra-valor a {
+    color: inherit;
+}
+
+@media only screen and (max-width: 929px) {
+    .caluga-cifra {
+        min-height: 17vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cifra-valor {
+        line-height: 0;
+    }
+}

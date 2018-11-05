@@ -1,0 +1,15 @@
+# [L] => páginas finales indicando al servidor que no procese más reglas, mejorando el rendimiento.
+
+DirectoryIndex index.php
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .? - [L]
+
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+<Files  ~ "\.conf$">
+  Order allow,deny
+  Deny from all
+</Files>

@@ -1,0 +1,23 @@
+<form id="config-{#ID_CONFIGURACION#}" class="column is-3">
+    <div class="box slide">
+        <div class="form-group">
+            <label class="label">{#CONFIGURACION#}</label>
+            <p class="control">
+                <input id="valor-{#ID_CONFIGURACION#}" class="input" type="text" placeholder="Link" value="{#VALOR#}"
+                       data-validate="true" data-validation="text">
+            </p>
+        </div>
+        <br>
+        <div class="form-group columns botones-slide" data-bloque="caluga">
+            <div class="column is-4">
+                <button type="button" class="button is-primary guardar" data-id="{#ID_CONFIGURACION#}">GUARDAR</button>
+            </div>
+            <div class="column is-4">
+                <button type="button" class="button is-danger borrar" data-id="{#ID_CONFIGURACION#}">ELIMINAR</button>
+            </div>
+            <div class="column is-5">
+                <div id="error-caluga-{#ID_CONFIGURACION#}" class="error"></div>
+            </div>
+        </div>
+    </div>
+</form>

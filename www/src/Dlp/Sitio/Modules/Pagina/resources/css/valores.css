@@ -1,0 +1,27 @@
+.bloque-valores {
+    padding-top: 4.8vw;
+    padding-bottom: 4.8vw;
+}
+
+.borde-icono {
+
+}
+.valor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 929px) {
+    .borde-icono {
+        width: 16.5vw;
+        height: 16.5vw;
+    }
+    .borde-icono .icono {
+        height: 18.5vw;
+    }
+
+    .bloque-valores .titulo {
+        margin-bottom: 5vh;
+    }
+}

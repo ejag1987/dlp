@@ -1,0 +1,68 @@
+header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index:10000;
+  padding: $padding-header;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.fondo {
+    background: transparent;
+  }
+
+  &.fondo-a {
+    background: transparent;
+  }
+
+
+  @media screen and (min-width: 480px) and (max-width: 840px) {
+    padding: 0.8rem 1rem 0.5rem 1rem;
+    &.fondo {
+      background: rgba($black,.7);
+    }
+
+    &.fondo-a {
+      background: transparent;
+    }
+    & #menu_min img {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.8rem 1rem 0.5rem 1rem;
+    &.fondo {
+      background: rgba($black,.7);
+    }
+
+    &.fondo-a {
+      background: transparent;
+    }
+
+    & #menu_min img {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+
+  & figure {
+    min-width: 76px;
+    @media screen and (max-width: 840px) {
+      max-width: 76px;
+    }
+  }
+}
+
+.idioma {
+  background-color: $naranja;
+  color: $white;
+  padding: 0 5px;
+  
+  &:hover {
+    background-color: #666;
+    color: $white;
+  }
+}

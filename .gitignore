@@ -1,0 +1,11 @@
+.idea/
+database/
+apache_logs/
+
+www/uploads/
+
+Would skip repository www/vendor/zcode/lighting
+www/vendor/
+mysql_logs/
+www/app.log
+www/en/app.log
